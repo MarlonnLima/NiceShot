@@ -9,7 +9,7 @@ class Target(BaseEntity):
         self.image = pygame.transform.smoothscale(self.image, (150, 150))
         
         self.rect = self.image.get_rect(center=position)
-        self.speed = 3
+        self.speed = 6
     
     """Atualiza estado do objeto"""
     def update(self):
