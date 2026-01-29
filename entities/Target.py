@@ -3,13 +3,13 @@ from entities.BaseEntity import BaseEntity
 
 class Target(BaseEntity):
     
-    def __init__(self, screen, position):
+    def __init__(self, screen, position, speed = 6):
         super().__init__(screen, position)
         self.image = pygame.image.load('assets/img/target.png')
         self.image = pygame.transform.smoothscale(self.image, (150, 150))
         
         self.rect = self.image.get_rect(center=position)
-        self.speed = 6
+        self.speed = speed
     
     """Atualiza estado do objeto"""
     def update(self):
